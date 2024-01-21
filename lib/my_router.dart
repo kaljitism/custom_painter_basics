@@ -1,5 +1,6 @@
 import 'package:custom_painter_basics/canvas_1.dart';
 import 'package:custom_painter_basics/canvas_2.dart';
+import 'package:custom_painter_basics/canvas_3.dart';
 import 'package:flutter/material.dart';
 
 class MyRouter extends StatefulWidget {
@@ -30,7 +31,7 @@ class _MyRouterState extends State<MyRouter> {
                 ),
               );
             },
-            title: const Text('Canvas 1'),
+            title: const Text('Painting Custom Shapes'),
           ),
           ListTile(
             onTap: () {
@@ -43,7 +44,20 @@ class _MyRouterState extends State<MyRouter> {
                 ),
               );
             },
-            title: const Text('Canvas 2'),
+            title: const Text('Learning Colors: Blend Mode'),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ShaderMaskPainting();
+                  },
+                ),
+              );
+            },
+            title: const Text('Learning Colors: Shader Mask'),
           ),
         ],
       ),
