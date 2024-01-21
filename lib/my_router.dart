@@ -1,4 +1,5 @@
 import 'package:custom_painter_basics/canvas_1.dart';
+import 'package:custom_painter_basics/canvas_2.dart';
 import 'package:flutter/material.dart';
 
 class MyRouter extends StatefulWidget {
@@ -30,6 +31,19 @@ class _MyRouterState extends State<MyRouter> {
               );
             },
             title: const Text('Canvas 1'),
+          ),
+          ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const CanvasTwo();
+                  },
+                ),
+              );
+            },
+            title: const Text('Canvas 2'),
           ),
         ],
       ),
